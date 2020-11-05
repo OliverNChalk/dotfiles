@@ -1,3 +1,5 @@
+" vim-bootstrap 2020-11-04 10:11:47
+
 "*****************************************************************************
 "" Vim-Plug core
 "*****************************************************************************
@@ -41,10 +43,33 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-scripts/grep.vim'
 Plug 'vim-scripts/CSApprox'
+Plug 'Raimondi/delimitMate'
 Plug 'dense-analysis/ale'
 Plug 'Yggdroot/indentLine'
+Plug 'editor-bootstrap/vim-bootstrap-updater'
 Plug 'tpope/vim-rhubarb' " required by fugitive to :Gbrowse
 Plug 'tomasiser/vim-code-dark'
+
+
+if isdirectory('/usr/local/opt/fzf')
+  Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
+else
+  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
+  Plug 'junegunn/fzf.vim'
+endif
+let g:make = 'gmake'
+if exists('make')
+        let g:make = 'make'
+endif
+Plug 'Shougo/vimproc.vim', {'do': g:make}
+
+"" Vim-Session
+Plug 'xolox/vim-misc'
+Plug 'xolox/vim-session'
+
+"" Snippets
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 
 "*****************************************************************************
 "" Custom bundles
@@ -53,6 +78,21 @@ Plug 'tomasiser/vim-code-dark'
 " typescript
 Plug 'leafgarland/typescript-vim'
 Plug 'HerringtonDarkholme/yats.vim'
+
+
+"*****************************************************************************
+"*****************************************************************************
+
+"" Include user's extra bundle
+if filereadable(expand("~/.config/nvim/local_bundles.vim"))
+  source ~/.config/nvim/local_bundles.vim
+endif
+
+call plug#end()
+
+" Required:
+filetype plugin indent on
+
 
 "*****************************************************************************
 "" Basic Setup
@@ -167,7 +207,6 @@ let g:airline_theme = 'powerlineish'
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tagbar#enabled = 1
 let g:airline_skip_empty_sections = 1
 
 "*****************************************************************************
@@ -212,6 +251,17 @@ nnoremap <silent> <leader>sh :terminal<CR>
 "*****************************************************************************
 " remove trailing whitespaces
 command! FixWhitespace :%s/\s\+$//e
+
+"*****************************************************************************
+"" Functions
+"*****************************************************************************
+if !exists('*s:setupWrapping')
+  function s:setupWrapping()
+    set wrap
+    set wm=2
+    set textwidth=79
+  endfunction
+endif
 
 "*****************************************************************************
 "" Autocmd Rules
