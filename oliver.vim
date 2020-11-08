@@ -1,4 +1,6 @@
-" vim-bootstrap 2020-11-04 10:11:47
+"Oliver defined settings:
+
+set relativenumber
 
 "*****************************************************************************
 "" Vim-Plug core
