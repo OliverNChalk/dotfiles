@@ -79,7 +79,7 @@ Plug 'honza/vim-snippets'
 "*****************************************************************************
 source $HOME/.config/nvim/which-key.vim
 source $HOME/.config/nvim/coc/coc.vim
-source $HOME/.config/nvim/coc-extensions.vim
+source $HOME/.config/nvim/coc/coc-extensions.vim
 
 
 "*****************************************************************************
