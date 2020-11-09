@@ -51,7 +51,8 @@ Plug 'Yggdroot/indentLine'
 Plug 'editor-bootstrap/vim-bootstrap-updater'
 Plug 'tpope/vim-rhubarb' " required by fugitive to :Gbrowse
 Plug 'tomasiser/vim-code-dark'
-
+Plug 'neoclide/coc.nvim'
+Plug 'liuchengxu/vim-which-key'
 
 if isdirectory('/usr/local/opt/fzf')
   Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
@@ -72,6 +73,14 @@ Plug 'xolox/vim-session'
 "" Snippets
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+
+"*****************************************************************************
+"" ChristianChiarulli Packages
+"*****************************************************************************
+source $HOME/.config/nvim/which-key.vim
+source $HOME/.config/nvim/coc/coc.vim
+source $HOME/.config/nvim/coc-extensions.vim
+
 
 "*****************************************************************************
 "" Custom bundles
@@ -115,7 +124,7 @@ set shiftwidth=4
 set expandtab
 
 "" Map leader to ,
-let mapleader=','
+let mapleader=' '
 
 "" Enable hidden buffers
 set hidden
