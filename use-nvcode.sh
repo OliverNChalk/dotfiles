@@ -1,2 +1,2 @@
 #!/bin/bash
-cp -R ./nvim/* $HOME/.config/nvim/
+cp -R ./nvcode/* $HOME/.config/nvim/
