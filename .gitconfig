@@ -20,5 +20,5 @@
 	commentChar = ";"
 [diff-so-fancy]
 	first-run = false
-[url "git@github.com"]
+[url "git@github.com:"]
 	insteadOf = https://github.com/
