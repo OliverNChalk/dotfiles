@@ -1,0 +1,12 @@
+# Arch linux uses alsa to power its audio output, alsa-utils is very helpful: 
+
+pacman -Sy alsa-utils		# Includes amixer and alsamixer
+
+amixer sset Master unmute	# Unmute master channel
+amixer sset Speaker unmute	# Unmute speaker channel
+amixer sset Headphone unmute	# Unmute headphone channel
+alsamixer			# CLI/GUI Hybrid Interface
+
+
+# Scale HiDPI Output:
+xrandr --output eDP1 --scale 1.25x1.25
