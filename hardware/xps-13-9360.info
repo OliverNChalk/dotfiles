@@ -10,3 +10,9 @@ alsamixer			# CLI/GUI Hybrid Interface
 
 # Scale HiDPI Output:
 xrandr --output eDP1 --scale 1.25x1.25
+
+# Change brightness
+# xrandr --output your-monitor-name --brightness brightness-level (0 - 1.0)
+xrandr				# Outputs display information
+xrandr | grep connected 	# Get the name of connected displays
+xrandr --output xDP-1 --brightness 0.7
