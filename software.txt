@@ -1,0 +1,4 @@
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.0/install.sh | bash
+source $HOME/.bashrc
+nvm install 15.2.0
+nvm use 15.2.0

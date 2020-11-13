@@ -5,7 +5,5 @@ mv autoload ../temp-backup/
 mv plugged ../temp-backup/
 mv session ../temp-backup/
 rm -rf ./*
-mv ../temp-backup/autoload ./autoload
-mv ../temp-backup/plugged ./plugged
-mv ../temp-backup/session ./session
+mv ../temp-backup/autoload/* ./
 rm -rf ../temp-backup

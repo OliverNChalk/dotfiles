@@ -1,0 +1,4 @@
+scrolling:
+        history: 10000
+        multiplier: 5
+        faux_mulitplier: 5
