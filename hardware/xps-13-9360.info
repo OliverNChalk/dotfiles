@@ -16,3 +16,6 @@ xrandr --output eDP1 --scale 1.25x1.25
 xrandr				# Outputs display information
 xrandr | grep connected 	# Get the name of connected displays
 xrandr --output xDP-1 --brightness 0.7
+
+# Change backlight brightness (0-7500)
+echo 7500 | sudo tee /sys/class/backlight/intel_backlight/brightness
