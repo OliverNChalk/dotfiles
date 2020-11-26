@@ -10,5 +10,3 @@ end
 function vimdiff
     nvim -d $argv
 end
-
-nvm use default
