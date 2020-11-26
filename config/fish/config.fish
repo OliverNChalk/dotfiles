@@ -7,4 +7,8 @@ function nvm
     bass source ~/.nvm/nvm.sh --no-use ';' nvm $argv
 end
 
+function vimdiff
+    nvim -d $argv
+end
+
 nvm use default
