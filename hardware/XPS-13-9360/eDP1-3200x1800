@@ -2,7 +2,7 @@
 xrandr --output DP-1 --off
 xrandr --output eDP-1 --mode 3200x1800 --auto
 
-echo "Xcursor.size: 18" | xrdb
+echo "Xcursor.size: 18" | xrdb -merge
 echo "Xft.dpi: 192" | xrdb -merge
 echo "rofi.dpi: 250" | xrdb -merge
 echo "Xft.antialias: 1" | xrdb -merge
