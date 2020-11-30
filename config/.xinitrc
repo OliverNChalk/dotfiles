@@ -33,6 +33,7 @@ fi
 
 # User defined:
 setxkbmap -option caps:escape
+nvm use default
 
 nitrogen --restore &
 picom &
