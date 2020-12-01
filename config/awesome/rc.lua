@@ -355,6 +355,7 @@ end
 -- Rules
 -- ===================================================================
 -- Rules to apply to new clients (through the "manage" signal).
+beautiful.titlebars_enabled = false;
 awful.rules.rules = {
     {
         -- All clients will match this rule.
