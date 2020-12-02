@@ -3,6 +3,10 @@ alias ls="ls --color=auto"
 set --export EDITOR nvim
 set --export TERMINAL alacritty
 
+if test -d $HOME/bin
+    set PATH $HOME/bin $PATH
+end
+
 # Functions
 function nvm
     bass source ~/.nvm/nvm.sh --no-use ';' nvm $argv
