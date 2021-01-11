@@ -18,9 +18,11 @@
 [core]
 	pager = diff-so-fancy | less --tabs=4 -RFX
 	commentChar = ";"
+	editor = nvim
 [diff-so-fancy]
 	first-run = false
 [url "git@github.com:"]
 	insteadOf = https://github.com/
 [pull]
+	rebase = false
 	ff = only
