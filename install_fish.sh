@@ -1,3 +1,4 @@
-pacman -Sy fish
+#!/bin/bash
+sudo pacman -Sy fish
 chsh -s /usr/bin/fish
-cp ./config/fish $HOME/.config/fish
+cp -r ./config/fish/ $HOME/.config/fish
