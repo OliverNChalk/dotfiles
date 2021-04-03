@@ -1,3 +1,6 @@
 [submodule "nvcode"]
 	path = nvcode
 	url = git@github.com:OliverNChalk/nvcode.git
+[submodule "elenapan-dotfiles"]
+	path = elenapan-dotfiles
+	url = git@github.com:elenapan/dotfiles.git
