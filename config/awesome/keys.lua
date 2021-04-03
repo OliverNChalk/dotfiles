@@ -81,6 +81,15 @@ keys.desktopbuttons = gears.table.join(
 
 -- {{{ Key bindings
 keys.globalkeys = gears.table.join(
+
+    -- Oliver Keybindings
+    -- MoveToScreen
+    awful.key({ superkey }, "o",
+        function()
+            awful.client.movetoscreen()
+        end,
+        {description = "move client to other screen", group = "client"}),
+
     -- Focus client by direction (hjkl keys)
     awful.key({ superkey }, "j",
         function()
@@ -535,9 +544,9 @@ keys.globalkeys = gears.table.join(
     -- Toggle wibar(s)
     awful.key({ superkey }, "b", function() wibars_toggle() end,
         {description = "show or hide wibar(s)", group = "awesome"}),
-    -- Emacs (O for org mode)
-    awful.key({ superkey }, "o", apps.org,
-        {description = "emacs", group = "launcher"}),
+    -- -- Emacs (O for org mode)
+    -- awful.key({ superkey }, "o", apps.org,
+        -- {description = "emacs", group = "launcher"}),
     -- Markdown input scratchpad (I for input)
     -- For quickly typing markdown comments and pasting them in
     -- the browser
