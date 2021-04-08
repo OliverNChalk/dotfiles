@@ -90,6 +90,9 @@ keys.globalkeys = gears.table.join(
         end,
         {description = "move client to other screen", group = "client"}),
 
+    awful.key({ superkey }, "Escape", function () awful.screen.focus_relative( 1) end,
+    {description = "focus the next screen", group = "screen"}),
+    
     -- Focus client by direction (hjkl keys)
     awful.key({ superkey }, "j",
         function()
@@ -205,12 +208,6 @@ keys.globalkeys = gears.table.join(
         helpers.resize_dwim(client.focus, "right")
     end),
 
-    -- No need for these (single screen setup)
-    --awful.key({ superkey, ctrlkey }, "j", function () awful.screen.focus_relative( 1) end,
-    --{description = "focus the next screen", group = "screen"}),
-    --awful.key({ superkey, ctrlkey }, "k", function () awful.screen.focus_relative(-1) end,
-    --{description = "focus the previous screen", group = "screen"}),
-    
     -- Urgent or Undo:
     -- Jump to urgent client or (if there is no such client) go back
     -- to the last tag
@@ -252,11 +249,11 @@ keys.globalkeys = gears.table.join(
             exit_screen_show()
         end,
         {description = "quit awesome", group = "awesome"}),
-    awful.key({ superkey }, "Escape",
-        function ()
-            exit_screen_show()
-        end,
-        {description = "quit awesome", group = "awesome"}),
+    -- awful.key({ superkey }, "Escape",
+        -- function ()
+            -- exit_screen_show()
+        -- end,
+        -- {description = "quit awesome", group = "awesome"}),
     awful.key({ }, "XF86PowerOff",
         function ()
             exit_screen_show()
@@ -286,26 +283,26 @@ keys.globalkeys = gears.table.join(
         {description = "decrease the number of master clients", group = "layout"}),
 
     -- Number of columns
-    awful.key({ superkey, altkey }, "k",   
-        function () 
-            awful.tag.incncol( 1, nil, true)
-        end,
-        {description = "increase the number of columns", group = "layout"}),
-    awful.key({ superkey, altkey }, "j",   
-        function () 
-            awful.tag.incncol( -1, nil, true)
-        end,
-        {description = "decrease the number of columns", group = "layout"}),
-    awful.key({ superkey, altkey }, "Up",   
-        function () 
-            awful.tag.incncol( 1, nil, true)
-        end,
-        {description = "increase the number of columns", group = "layout"}),
-    awful.key({ superkey, altkey }, "Down",   
-        function () 
-            awful.tag.incncol( -1, nil, true)
-        end,
-        {description = "decrease the number of columns", group = "layout"}),
+    -- awful.key({ superkey, altkey }, "k",   
+        -- function () 
+            -- awful.tag.incncol( 1, nil, true)
+        -- end,
+        -- {description = "increase the number of columns", group = "layout"}),
+    -- awful.key({ superkey, altkey }, "j",   
+        -- function () 
+            -- awful.tag.incncol( -1, nil, true)
+        -- end,
+        -- {description = "decrease the number of columns", group = "layout"}),
+    -- awful.key({ superkey, altkey }, "Up",   
+        -- function () 
+            -- awful.tag.incncol( 1, nil, true)
+        -- end,
+        -- {description = "increase the number of columns", group = "layout"}),
+    -- awful.key({ superkey, altkey }, "Down",   
+        -- function () 
+            -- awful.tag.incncol( -1, nil, true)
+        -- end,
+        -- {description = "decrease the number of columns", group = "layout"}),
 
 
     --awful.key({ superkey,           }, "space", function () awful.layout.inc( 1)                end,
