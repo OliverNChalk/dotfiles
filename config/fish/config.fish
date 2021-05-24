@@ -16,6 +16,16 @@ function vimdiff
     nvim -d $argv
 end
 
+function check-local
+    for x in */
+        cd $x
+        echo "Checking repo $x:"
+        git status
+        echo \n
+        cd ..
+    end
+end
+
 # Run on startup
 if status is-login
     nvm use default
