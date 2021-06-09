@@ -25,4 +25,6 @@
 	insteadOf = https://github.com/
 [pull]
 	rebase = false
-	ff = only
+    ff = only
+[alias]
+    prune-branches = !git remote prune origin && git branch -vv | grep ': gone]' | awk '{print $1}' | xargs -r git branch -D
