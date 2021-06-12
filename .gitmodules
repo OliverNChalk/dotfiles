@@ -4,3 +4,9 @@
 [submodule "elenapan-dotfiles"]
 	path = elenapan-dotfiles
 	url = git@github.com:elenapan/dotfiles.git
+[submodule "packer.nvim"]
+	path = packer.nvim
+	url = git@github.com:wbthomason/packer.nvim.git
+[submodule "nvim"]
+	path = nvim
+	url = git@github.com:OliverNChalk/nvim.git
