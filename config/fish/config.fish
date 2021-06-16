@@ -1,6 +1,7 @@
 # Aliases and Global Variables
 alias ls="ls --color=auto"
-set --export EDITOR nvim
+set --export VISUAL "nvr --remote-wait"
+set --export EDITOR "nvr --remote-wait"
 set --export TERMINAL alacritty
 
 if test -d $HOME/bin

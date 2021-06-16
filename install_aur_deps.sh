@@ -1,2 +1,2 @@
 #!/bin/bash
-yay -Sy neovim-nightly-git brave-bin
+yay -Sy neovim-nightly-bin brave-bin neovim-remote
