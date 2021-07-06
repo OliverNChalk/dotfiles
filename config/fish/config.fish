@@ -1,8 +1,9 @@
 # Aliases and Global Variables
 alias ls="ls --color=auto"
-set --export VISUAL "nvr --remote-wait"
-set --export EDITOR "nvr --remote-wait"
-set --export TERMINAL alacritty
+set -x VISUAL "nvr --remote-wait"
+set -x EDITOR "nvr --remote-wait"
+set -x TERMINAL alacritty
+set -x PROXIMA_PACKAGE_TOKEN (head -1 $HOME/.ssh/proxima-package-token)
 
 if test -d $HOME/bin
     set PATH $HOME/bin $PATH
